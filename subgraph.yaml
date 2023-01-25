@@ -10,9 +10,9 @@ dataSources:
     name: ENSRegistry
     network: optimism-goerli
     source:
-      address: "0x59081872bf84C08F385A418d09609e2F1161A84C"
+      address: "0xe6BA00E7D50ADE491c2E7E56B840d30b446B9260"
       abi: EnsRegistry
-      startBlock: 4569843
+      startBlock: 4605351
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -38,9 +38,9 @@ dataSources:
     name: Resolver
     network: optimism-goerli
     source:
-      address: "0x15FD7C87fedf2A1A33F971c61c611ED67638177B"
+      address: "0x061dFb0DB0Ec6dbB10F078C06268cdA430d491F9"
       abi: Resolver
-      startBlock: 4570058
+      startBlock: 4605558
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -88,9 +88,9 @@ dataSources:
     name: BaseRegistrar
     network: optimism-goerli
     source:
-      address: "0xF91e659d6BCF37EE577c37369BfeBa8674228191"
+      address: "0x2516E97a3F4a1c299403A4C9331868055Ece5538"
       abi: BaseRegistrar
-      startBlock: 4569961
+      startBlock: 4605459
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -115,9 +115,9 @@ dataSources:
     name: EthRegistrarController
     network: optimism-goerli
     source:
-      address: "0xec5a8F176cef56AE32eaCB6d0466b70F362EaDEE"
+      address: "0x3Cf1C1eF6ea69fF8e55951c03A2161f80447B5E7"
       abi: EthRegistrarController
-      startBlock: 4570029
+      startBlock: 4605526
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -139,9 +139,9 @@ dataSources:
     name: NameWrapper
     network: optimism-goerli
     source:
-      address: "0xd13e72EbEafCbc40a070CCE7353FaC8b695C5832"
+      address: "0x9DA571993bFE70e047B4440E529913A6898ED2D7"
       abi: NameWrapper
-      startBlock: 4570012
+      startBlock: 4605513
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5

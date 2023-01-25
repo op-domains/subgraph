@@ -1,12 +1,12 @@
 {
   "name": "onsgoerli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/op-domains/subgraph",
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "auth": "graph auth --product hosted-service ",
+    "auth": "graph auth --product hosted-service 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",
     "deploy": "graph deploy opnames/onsgoerli --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
   },
   "devDependencies": {
