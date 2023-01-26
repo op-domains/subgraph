@@ -8,11 +8,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: ENSRegistry
-    network: optimism-goerli
+    network: goerli
     source:
-      address: "0xe6BA00E7D50ADE491c2E7E56B840d30b446B9260"
+      address: "0x655dB01C01e015654dC60BC5DbB4e6D2B6a34f58"
       abi: EnsRegistry
-      startBlock: 4605351
+      startBlock: 8381019
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -36,11 +36,11 @@ dataSources:
           handler: handleNewTTL
   - kind: ethereum/contract
     name: Resolver
-    network: optimism-goerli
+    network: goerli
     source:
-      address: "0x061dFb0DB0Ec6dbB10F078C06268cdA430d491F9"
+      address: "0xb468e63F9Ec5DB4a75eD79C69b3C8c4E01Df82b9"
       abi: Resolver
-      startBlock: 4605558
+      startBlock: 8381055
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -86,11 +86,11 @@ dataSources:
           handler: handleVersionChanged
   - kind: ethereum/contract
     name: BaseRegistrar
-    network: optimism-goerli
+    network: goerli
     source:
-      address: "0x2516E97a3F4a1c299403A4C9331868055Ece5538"
+      address: "0xBA865cD719FC953b755DB9D15387196A69f0C72a"
       abi: BaseRegistrar
-      startBlock: 4605459
+      startBlock: 8381036
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -113,11 +113,11 @@ dataSources:
           handler: handleNameTransferred
   - kind: ethereum/contract
     name: EthRegistrarController
-    network: optimism-goerli
+    network: goerli
     source:
-      address: "0x3Cf1C1eF6ea69fF8e55951c03A2161f80447B5E7"
+      address: "0xdD6F05196e72Cd91Eaa8012c470fCffacdC53399"
       abi: EthRegistrarController
-      startBlock: 4605526
+      startBlock: 8381050
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -137,11 +137,11 @@ dataSources:
           handler: handleNameRenewedByController
   - kind: ethereum/contract
     name: NameWrapper
-    network: optimism-goerli
+    network: goerli
     source:
-      address: "0x9DA571993bFE70e047B4440E529913A6898ED2D7"
+      address: "0x8778e9395909Ee044Ef0da1Fe1098e2A482f5FB3"
       abi: NameWrapper
-      startBlock: 4605513
+      startBlock: 8381048
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
