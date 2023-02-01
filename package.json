@@ -1,13 +1,13 @@
 {
-  "name": "onsgoerli",
+  "name": "minegoerli",
   "version": "1.0.2",
-  "repository": "https://github.com/op-domains/subgraph",
+  "repository": "https://github.com/stepnalien/mine-subgraph",
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "auth": "graph auth --product hosted-service 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",
-    "deploy": "graph deploy opnames/onsgoerli --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
+    "auth": "graph auth --product hosted-service ",
+    "deploy": "graph deploy stepnalien/minegoerli --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
   },
   "devDependencies": {
     "@ensdomains/content-hash": "^2.5.3",

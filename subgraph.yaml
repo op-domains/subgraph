@@ -2,7 +2,7 @@ specVersion: 0.0.4
 description: >-
   A secure & decentralized way to address resources on and off the blockchain
   using simple, human-readable names. Access domains and transfer history.
-repository: "https://github.com/op-domains/subgraph"
+repository: "https://github.com/stepnalien/mine-subgraph"
 schema:
   file: ./schema.graphql
 dataSources:
@@ -10,9 +10,9 @@ dataSources:
     name: ENSRegistry
     network: goerli
     source:
-      address: "0x655dB01C01e015654dC60BC5DbB4e6D2B6a34f58"
+      address: "0xf81dC90085379ACC1B5c3C876F92A6cE55dB53F0"
       abi: EnsRegistry
-      startBlock: 8381019
+      startBlock: 8416075
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -38,9 +38,9 @@ dataSources:
     name: Resolver
     network: goerli
     source:
-      address: "0xb468e63F9Ec5DB4a75eD79C69b3C8c4E01Df82b9"
+      address: "0xE00545a7060AAF1278aAF28B7330e879A0976815"
       abi: Resolver
-      startBlock: 8381055
+      startBlock: 8416113
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -88,9 +88,9 @@ dataSources:
     name: BaseRegistrar
     network: goerli
     source:
-      address: "0xBA865cD719FC953b755DB9D15387196A69f0C72a"
+      address: "0xbE416295d2c3afA7A903886a7725a3ed06A382f6"
       abi: BaseRegistrar
-      startBlock: 8381036
+      startBlock: 8416095
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -115,9 +115,9 @@ dataSources:
     name: EthRegistrarController
     network: goerli
     source:
-      address: "0xdD6F05196e72Cd91Eaa8012c470fCffacdC53399"
+      address: "0x27A1CeB6E2c5F75fa7F4286421C94D00ec94D9e2"
       abi: EthRegistrarController
-      startBlock: 8381050
+      startBlock: 8416107
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -139,9 +139,9 @@ dataSources:
     name: NameWrapper
     network: goerli
     source:
-      address: "0x8778e9395909Ee044Ef0da1Fe1098e2A482f5FB3"
+      address: "0x4A7c7a621834aE33282AE71e403b94Ac11024070"
       abi: NameWrapper
-      startBlock: 8381048
+      startBlock: 8416104
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
