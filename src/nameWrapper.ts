@@ -1,6 +1,6 @@
 // Import types and APIs from graph-ts
 import {
-  Bytes, store, BigInt
+  Bytes, store, BigInt, log, ByteArray
 } from '@graphprotocol/graph-ts'
 // Import event types from the registry contract ABI
 import {
@@ -12,7 +12,7 @@ import { concat, createEventID, createOrLoadAccount, createOrLoadDomain } from '
 
 function decodeName (buf:Bytes):Array<string> {
   let offset = 0
-  let list = Bytes.fromHexString('')
+  let list = new ByteArray(0);
   let dot = Bytes.fromHexString('2e')
   let len = buf[offset++]
   let hex = buf.toHexString()
@@ -39,14 +39,22 @@ function decodeName (buf:Bytes):Array<string> {
 
 
 
+
 export function handleNameWrapped(event: NameWrappedEvent): void {
+  log.debug('handleNameWrapped12345', [])
+  log.debug('handleNameWrappedParams {}', [event.params.name.toString()])
   let decoded = decodeName(event.params.name)
   let label = decoded[0]
   let name = decoded[1]
+  log.debug('handleNameWrappedDecoded', [])
+  log.debug('handleNameWrappedDecoded values: {} , {}', [decoded[0], decoded[1]])
+  
   let node = event.params.node
   let fuses = event.params.fuses
   let blockNumber = event.block.number.toI32()
   let transactionID = event.transaction.hash
+  log.debug('befor account create or load', [])
+  
   let owner = createOrLoadAccount(event.params.owner.toHex())
   let domain = createOrLoadDomain(node.toHex())
 
