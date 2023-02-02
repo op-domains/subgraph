@@ -11,39 +11,58 @@ import { Domain, FusesSet, NameUnwrapped, NameWrapped, WrappedDomain, WrappedTra
 import { concat, createEventID, createOrLoadAccount, createOrLoadDomain } from './utils'
 
 function decodeName (buf:Bytes):Array<string> {
+  log.debug('handleNameWrappedParams decodeName, {}', [buf.toHexString()])
   let offset = 0
   let list = new ByteArray(0);
   let dot = Bytes.fromHexString('2e')
   let len = buf[offset++]
   let hex = buf.toHexString()
   let firstLabel = ''
+  log.debug('decodeName len', [len.toString()])
   if (len === 0) {
     return [firstLabel, '.']
   }
-  
+
   while (len) {
+    log.debug('decodeName while, {}', [len.toString()])
     let label = hex.slice((offset +1 ) * 2, (offset + 1 + len ) * 2)
     let labelBytes = Bytes.fromHexString(label)
   
+    log.debug('decodeName while label, {}', [label])
     if(offset > 1){
       list = concat(list, dot)
     }else{
       firstLabel = labelBytes.toString()
     }
+    log.debug('decodeName while labelBytes, {}', [labelBytes.toString()])
     list = concat(list, labelBytes)
     offset += len
     len = buf[offset++]
+    log.debug('decodeName while len, {}', [len.toString()])
   }
+  log.debug('decodeName list {}, {}', [firstLabel, list.toString()])
   return [firstLabel, list.toString()]
+}
+
+function decodeNameNew(buf:Bytes):Array<string> {
+  log.debug('handleNameWrappedParams decodeNameNew, {}', [buf.toString()])
+  const splitted =  buf.toString().split(' ')
+  if (splitted.length === 2) {
+    return [splitted[0], splitted[1]]
+  }
+  const splitted2 = buf.toString().split('.')
+  if (splitted2.length === 2) {
+    return [splitted2[0], splitted2[1]]
+  }
+  return ['unknown','unknown']
 }
 
 
 
 
 export function handleNameWrapped(event: NameWrappedEvent): void {
-  log.debug('handleNameWrapped12345', [])
-  log.debug('handleNameWrappedParams {}', [event.params.name.toString()])
-  let decoded = decodeName(event.params.name)
+  log.debug('handleNameWrappedParams {}', [event.params.name.toHexString()])
+  let decoded = decodeNameNew(event.params.name)
   let label = decoded[0]
   let name = decoded[1]
   log.debug('handleNameWrappedDecoded', [])
