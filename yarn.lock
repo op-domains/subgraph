@@ -3038,16 +3038,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minegoerli@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "minegoerli@workspace:."
-  dependencies:
-    "@ensdomains/content-hash": ^2.5.3
-    "@graphprotocol/graph-cli": ^0.23.2
-    "@graphprotocol/graph-ts": ^0.23.1
-  languageName: unknown
-  linkType: soft
-
 "minimalistic-assert@npm:^1.0.0, minimalistic-assert@npm:^1.0.1":
   version: 1.0.1
   resolution: "minimalistic-assert@npm:1.0.1"
@@ -3625,6 +3615,16 @@ __metadata:
   checksum: 2478859ef817fc5d4e9c2f9e5728512ddd1dbc9fb7829ad263765bb6d3b91ce699d6e2332eef6b7dff183c2f490bd3349f1666427eaba4469fba0ac38dfd0d34
   languageName: node
   linkType: hard
+
+"opgoerli@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "opgoerli@workspace:."
+  dependencies:
+    "@ensdomains/content-hash": ^2.5.3
+    "@graphprotocol/graph-cli": ^0.23.2
+    "@graphprotocol/graph-ts": ^0.23.1
+  languageName: unknown
+  linkType: soft
 
 "optimist@npm:~0.3.5":
   version: 0.3.7
